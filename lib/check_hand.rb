@@ -16,7 +16,7 @@ class CheckHand
     return "Three of a Kind" if three_of_a_kind?
     return "Two Pair" if two_pair?
     return "One Pair" if one_pair?
-    return "High Card is " + high_card 
+    return "High Card is " + high_card
   end
 
   private
@@ -28,7 +28,7 @@ class CheckHand
   end
 
   def four_of_a_kind?
-    card_counts.values.any { |value| value == 4 }
+    card_counts.values.any? { |value| value == 4 }
   end
 
   def full_house?
@@ -44,7 +44,7 @@ class CheckHand
   end
 
   def three_of_a_kind?
-    card_counts.values.any { |value| value == 3 }
+    card_counts.values.any? { |value| value == 3 }
   end
 
   def two_pair?
