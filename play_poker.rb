@@ -2,11 +2,11 @@ require_relative 'lib/deal_hands'
 require_relative 'lib/hand_rank'
 require_relative 'lib/find_winner'
 
-puts "How many players? (Please enter a number between 1 and 10)"
+puts "How many players? (Please enter a number between 2 and 10)"
 number_of_players = gets
 number_of_players = number_of_players.to_i
-while number_of_players < 1 || number_of_players > 10
-  puts "Number of players needs to be a number between 1 and 10"
+while number_of_players < 2 || number_of_players > 10
+  puts "Number of players needs to be a number between 2 and 10"
   puts "How many players?"
   number_of_players = gets
   number_of_players = number_of_players.to_i
