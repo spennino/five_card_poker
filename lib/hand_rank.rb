@@ -1,6 +1,6 @@
 require_relative 'deck'
 
-class CheckHand
+class HandRank
   def initialize(player_hand)
     @player_hand = player_hand
     @deck = Deck.new()
@@ -8,15 +8,25 @@ class CheckHand
   end
 
   def execute
-    return "Straight Flush" if straight_flush?
-    return "Four of a Kind" if four_of_a_kind?
-    return "Full House" if full_house?
-    return "Flush" if flush?
-    return "Straight" if straight?
-    return "Three of a Kind" if three_of_a_kind?
-    return "Two Pair" if two_pair?
-    return "One Pair" if one_pair?
-    return "High Card is " + high_card
+    if straight_flush?
+      return 1
+    elsif four_of_a_kind?
+      return 2
+    elsif full_house?
+      return 3
+    elsif flush?
+      return 4
+    elsif straight?
+      return 5
+    elsif three_of_a_kind?
+      return 6
+    elsif two_pair?
+      return 7
+    elsif one_pair?
+      return 8
+    else
+      return 9
+    end
   end
 
   private
